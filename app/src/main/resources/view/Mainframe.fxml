@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="768.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #0a84ff#0a84ff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.tsatualdypov.app.controllers.WeatherController">
+   <children>
+      <HBox fx:id="weatherContentHBox" alignment="CENTER" layoutX="167.0" layoutY="241.0" spacing="16.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="256.0" maxWidth="256.0" prefHeight="256.0" prefWidth="256.0" HBox.hgrow="NEVER">
+               <children>
+                  <Circle fill="WHITE" layoutX="128.0" layoutY="128.0" radius="128.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle fill="WHITE" layoutX="221.0" layoutY="35.0" radius="32.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle fill="WHITE" layoutX="222.0" layoutY="219.0" radius="16.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" />
+                  <HBox alignment="CENTER" layoutX="52.0" layoutY="55.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="weatherImageView" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <VBox alignment="CENTER" prefHeight="278.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="currentWeatherLabel" text="Sunny" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Montserrat Regular" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="currentTemperatureLabel" text="-7°" textFill="WHITE">
+                     <font>
+                        <Font name="Montserrat Bold" size="128.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cityLabel" layoutX="434.0" layoutY="12.0" opacity="0.8" text="Nur-Sultan" textFill="WHITE">
+                     <font>
+                        <Font name="Montserrat Regular" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <HBox spacing="8.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="278.0" prefWidth="150.0" spacing="4.0">
+                     <children>
+                        <Label fx:id="firstWeekDayLabel" text="Monday" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="secondWeekDayLabel" layoutX="89.0" layoutY="380.0" text="Tuesday" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="thirdWeekDayLabel" layoutX="89.0" layoutY="396.0" text="Wednesday" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fourthWeekDayLabel" layoutX="89.0" layoutY="413.0" text="Thursday" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fifthWeekDayLabel" layoutX="89.0" layoutY="429.0" text="Friday" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="sixthWeekDayLabel" layoutX="89.0" layoutY="446.0" text="Saturday" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="seventhWeekDayLabel" layoutX="89.0" layoutY="462.0" text="Sunday" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="278.0" prefWidth="60.0" spacing="4.0">
+                     <children>
+                        <Label fx:id="firstWeekDayMaxTemperatureLabel" text="30" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="secondWeekDayMaxTemperatureLabel" layoutX="89.0" layoutY="380.0" text="30" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="thirdWeekDayMaxTemperatureLabel" layoutX="89.0" layoutY="396.0" text="30" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fourthWeekDayMaxTemperatureLabel" layoutX="89.0" layoutY="413.0" text="30" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fifthWeekDayMaxTemperatureLabel" layoutX="89.0" layoutY="429.0" text="30" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="sixthWeekDayMaxTemperatureLabel" layoutX="89.0" layoutY="446.0" text="30" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="seventhWeekDayMaxTemperatureLabel" layoutX="89.0" layoutY="462.0" text="30" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" layoutX="168.0" layoutY="10.0" prefHeight="278.0" prefWidth="60.0" spacing="4.0">
+                     <children>
+                        <Label fx:id="firstWeekDayMinTemperatureLabel" opacity="0.8" text="30" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="secondWeekDayMinTemperatureLabel" layoutX="89.0" layoutY="380.0" opacity="0.8" text="30" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="thirdWeekDayMinTemperatureLabel" layoutX="89.0" layoutY="396.0" opacity="0.8" text="30" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fourthWeekDayMinTemperatureLabel" layoutX="89.0" layoutY="413.0" opacity="0.8" text="30" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fifthWeekDayMinTemperatureLabel" layoutX="89.0" layoutY="429.0" opacity="0.8" text="30" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="sixthWeekDayMinTemperatureLabel" layoutX="89.0" layoutY="446.0" opacity="0.8" text="30" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="seventhWeekDayMinTemperatureLabel" layoutX="89.0" layoutY="462.0" opacity="0.8" text="30" textFill="WHITE">
+                           <font>
+                              <Font name="Montserrat Regular" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox fx:id="loadingStateHBox" alignment="CENTER" opacity="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane>
+               <children>
+                  <Circle fill="WHITE" layoutX="32.0" layoutY="388.0" radius="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <ProgressIndicator layoutX="6.0" layoutY="361.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+         <children>
+            <TextField fx:id="searchCityField" onAction="#searchCityFieldAction" prefHeight="44.0" prefWidth="512.0" promptText="Enter city..." style="-fx-border-radius: 8; -fx-background-radius: 8; -fx-background-color: #f2f2f7;">
+               <font>
+                  <Font name="Montserrat Regular" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <padding>
+                  <Insets left="16.0" right="16.0" />
+               </padding>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" AnchorPane.bottomAnchor="32.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="44.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logos/owm.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
